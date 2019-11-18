@@ -1,0 +1,31 @@
+{
+  "name": "web-dev-root",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pre-install": "npm i -g nodemon && npm i",
+    "watch": "nodemon index.js --watch assets -e scss,js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.13.0",
+    "uglify-js": "^3.6.9",
+    "uglifycss": "0.0.29"
+  },
+  "vars": {
+    "type": {
+      "wordpress": false,
+      "themeName": "nekaiko",
+      "path": "./public"
+    },
+    "scriptFiles": [
+      "js/main.js"
+    ],
+    "styleFiles": [
+      "scss/style.scss"
+    ]
+  }
+}

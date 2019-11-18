@@ -1,0 +1,164 @@
+
+/* VARIABLES TO BE SET BY USER */
+
+$theme-color       : aquamarine;
+$accent-theme-color: aqua;
+$text-color        : black;
+$light-grey        : #bbb;
+$medium-grey       : #888;
+
+/* FONTS */
+$font-family       : Arial, Helvetica, sans-serif;
+
+/* BORDERS */
+$border-radius     : 1px;
+$padding-radius    : 0.5em;
+$border-color      : $accent-theme-color;
+
+$small-gap         : 0.25em;
+
+$gradient-angle    : -45deg;
+
+
+
+/* CUSTOM SCROLLBAR */
+
+body::-webkit-scrollbar {
+    background-color:#fff;
+    width:16px;
+    
+    &::-webkit-scrollbar-track {
+        background-color:#fff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color:#babac0;
+        border-radius: 16px;
+        border:4px solid #fff;
+    }
+    &::-webkit-scrollbar-button {
+        display: none
+    }
+}
+
+/* FIXERS*/
+
+/* GLOBAL */
+
+html {
+    font-family: $font-family;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+div.page, .container, .content {
+    padding: 0 1em;
+}
+
+mark {
+    background-color: $theme-color;
+    color: $text-color;
+}
+
+table {
+    border-collapse: collapse;
+    border-radius: $border-radius;
+}
+
+table, th, td {
+    border: 1px solid $light-grey;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: $text-color;
+    
+}
+
+a:hover {
+    color: $theme-color;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+figcaption {
+    padding-top: $small-gap;
+    text-align: center;
+}
+
+iframe {
+    border: 0;
+}
+
+fieldset {
+    border: 1px solid $text-color;
+    border-radius: $border-radius;
+}
+
+input, textarea, select {
+    font-family: $font-family;
+    border: 1px solid $medium-grey;
+    border-radius: $border-radius;
+    padding: $padding-radius;
+    box-shadow: none;
+    outline: none;
+}
+
+input[type=checkbox] {
+    border-radius: $border-radius;
+}
+
+button {
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    padding: $padding-radius;
+    background-color: $theme-color;
+}
+
+meter::-webkit-meter-bar {
+    background: none;
+    background-color: whiteSmoke;
+    box-shadow: none;
+    border-radius: $border-radius;
+}
+
+meter::-webkit-meter-optimum-value {
+    box-shadow: 0 5px 5px -5px #999 inset;
+    background-image: linear-gradient($gradient-angle, $accent-theme-color, $theme-color);
+    background-size: 100% 100%;
+    border-radius: $border-radius;
+}
+
+progress {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+progress::-webkit-progress-bar {
+    border-radius: $border-radius;
+}
+
+progress[value]::-webkit-progress-value {
+    background-image:
+    -webkit-linear-gradient($gradient-angle, 
+    transparent 33%, rgba(0, 0, 0, .1) 33%, 
+    rgba(0,0, 0, .1) 66%, transparent 66%),
+    -webkit-linear-gradient(top, 
+    rgba(255, 255, 255, .25), 
+    rgba(0, 0, 0, .25)),
+    -webkit-linear-gradient(left, $theme-color, $accent-theme-color);
+
+    border-radius: $border-radius;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+}
